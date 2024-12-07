@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: -webkit-linear-gradient(left, #008C9E, #00DFFC);
+}
+
+.wrapper {
+    overflow: hidden;
+    max-width: 390px;
+    background: #343838;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .title-text {
+    display: flex;
+    width: 200%;
+}
+
+.wrapper .title-text .title {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .form-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+}
+
+.form-container .form-inner form {
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-inner form .field {
+    height: 40px;
+    width: 100%;
+    margin-top: 15px;
+    position: relative; /* Added for error message positioning */
+}
+
+.form-inner form .field input,
+.form-inner form .field select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 10px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid #272a2a;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+    color: black; /* Change text color to black */
+    background: white; /* Set background to white */
+}
+
+.form-inner form .field input:focus,
+.form-inner form .field select:focus {
+    border-color: #00DFFC; /* Change border color on focus */
+}
+
+.error-message {
+    color: red; /* Error message color */
+    font-size: 12px; /* Error message size */
+    position: absolute; /* Positioning for error messages */
+    bottom: -20px; /* Position below input */
+    left: 10px; /* Align to the left */
+}
+
+.form-inner form .field.password-field {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align items vertically */
+}
+
+.form-inner form .field.password-field input {
+    flex: 1; /* Allow input to take available space */
+    margin-right: 10px; /* Space between input and button */
+}
+
+.form-inner form .field.password-field .toggle-password {
+    background: none; /* Remove default button background */
+    border: none; /* Remove border */
+    color: #00DFFC; /* Color of the icon */
+    font-size: 20px; /* Increase icon size */
+    cursor: pointer; /* Pointer cursor for button */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.form-inner form .field.password-field .toggle-password:hover {
+    color: #008C9E; /* Change color on hover */
+}
+
+.form-inner form .field.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.form-inner form .field.remember-me input[type="checkbox"] {
+    width: 25px; /* Adjust the checkbox size */
+    height: 25px; /* Adjust the checkbox size */
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+.form-inner form .field.remember-me label {
+    font-size: 16px; /* Adjust the font size for the label */
+}
+
+form .field input[type="submit"] {
+    color: #343838;
+    font-size: 20px;
+    font-weight: 600;
+    background: #00DFFC;
+    border: none;
+    cursor: pointer;
+}
+
+form .field input[type="submit"]:hover {
+    background: #008C9E;
+}
+
+.form-inner form .signup-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+    color: #00DFFC;
+    text-decoration: none;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 400px) {
+    .wrapper {
+        width: 90%; /* Make the wrapper take 90% of the width on smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .form-inner form .field {
+        height: 35px; /* Shorten height further for smaller screens */
+    }
+
+    .form-inner form .field input,
+    .form-inner form .field select {
+        font-size: 15px; /* Slightly smaller font size */
+    }
+}
+
+.field#studentID {
+    margin-top: 20px; /* Add top margin to Student ID */
+}
+
+.field select option {
+    color: black; /* Set text color for options to black */
+    background: white; /* Set background color for options to white */
+}
